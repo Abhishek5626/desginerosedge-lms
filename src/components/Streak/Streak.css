@@ -1,0 +1,139 @@
+.streakPanel {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 16px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial;
+}
+
+/* header */
+.streakPanel__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.streakPanel__iconWrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.35);
+  display: grid;
+  place-items: center;
+}
+
+.streakPanel__icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* title */
+.streakPanel__title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e8e8e8;
+}
+
+/* main number row */
+.streakPanel__main {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.streakPanel__count {
+  font-size: 44px;         /* smaller than before so layout fits */
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+}
+
+.streakPanel__countIcon {
+  width: 18px;
+  height: 18px;
+  filter: drop-shadow(0 0 6px rgba(123, 44, 255, 0.9));
+}
+
+/* subtitle */
+.streakPanel__subtitle {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.8);
+}
+.streakPanel__subtitle--strong {
+  font-weight: 700;
+  color: #fff;
+}
+
+/* days row - responsive, will always fit 7 items */
+.streakPanel__days {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* each day is a vertical stack */
+.streakPanel__day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1 1 0;                 /* allow even distribution */
+  min-width: 0;                /* prevents child overflow */
+}
+
+/* circle size tuned to fit comfortably */
+.streakPanel__dayCircle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  display: grid;
+  place-items: center;
+  transition: background .16s ease, border-color .16s ease;
+  box-sizing: border-box;
+}
+
+/* icon inside circle */
+.streakPanel__dayIcon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.6;
+}
+
+/* label below circle */
+.streakPanel__dayLabel {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.62);
+  white-space: nowrap;
+}
+
+/* active state */
+.streakPanel__day.is-active .streakPanel__dayCircle {
+  background: rgba(123, 44, 255, 0.12);
+  border-color: #7b2cff;
+}
+.streakPanel__day.is-active .streakPanel__dayIcon {
+  opacity: 1;
+}
+
+/* very small viewports: stack labels tighter, shrink circles */
+@media (max-width: 420px) {
+  .streakPanel__count { font-size: 36px; }
+  .streakPanel__dayCircle { width: 40px; height: 40px; }
+  .streakPanel__dayLabel { font-size: 11px; }
+}

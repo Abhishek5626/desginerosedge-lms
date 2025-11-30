@@ -1,0 +1,106 @@
+.recCard {
+  display: flex;
+  flex-direction: column;
+  background: rgba(40, 40, 40, 0.29);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.03);
+  box-sizing: border-box;
+  color: #e8e8e8;
+  transition: transform .12s ease, box-shadow .12s ease;
+  cursor: pointer;
+}
+
+.recCard:focus,
+.recCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  outline: none;
+}
+
+/* media area (top rectangle) */
+.recCard__media {
+  border-radius: 8px;
+  height: 160px;
+  background: #ffffff05;
+  display: block;
+}
+.recCard__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;  
+}
+
+/* body */
+.recCard__body {
+  padding: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* title row -> title on left, small badge on right */
+.recCard__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.recCard__title {
+  margin: 0;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* badge (small circular icon to the right) */
+.recCard__badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.03);
+  display: grid;
+  place-items: center;
+  font-size: 14px;
+  color: #fff;
+}
+
+/* description text */
+.recCard__desc {
+  margin: 0;
+  color: rgba(255,255,255,0.62);
+  font-size: 14px;
+  line-height: 1.45;
+  min-height: 64px; /* roughly match screenshot height so cards align */
+}
+
+/* pills / tags row */
+.recCard__pills {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.recCard__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.03);
+  color: #ddd;
+  font-size: 13px;
+}
+
+.recCard__pillIcon 
+{
+   width: 14px;
+  height: 14px;
+  display: inline-block;
+  object-fit: contain;
+  opacity: 0.9;
+}

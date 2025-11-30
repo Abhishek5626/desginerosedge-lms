@@ -1,0 +1,97 @@
+/* src/components/Recommended/RecommendedList.css */
+
+/* Outer container visually matches your Bulletin Board */
+.recommended-panel {
+ background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* header row: icon + title on left, nav on right */
+.recommended__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* left title area */
+.recommended__titleWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.recommended__icon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.03);
+  font-size: 18px;
+}
+
+.recommended__title {
+  margin: 0;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* tiny header subtitle if needed (not used by default) */
+.recommended__subtitle {
+  color: rgba(255,255,255,0.6);
+  font-size: 13px;
+}
+
+/* nav buttons (round) */
+.recommended__controls {
+  display: flex;
+  gap: 8px;
+}
+.recommended__navBtn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.04);
+  color: #fff;
+  display: inline-grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+/* Grid that holds card cells.
+   Each .recommended__cell simply sizes to the column. */
+.recommended__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* two columns like Bulletin Board */
+  gap: 18px;
+  margin-top: 6px;
+  align-items: start;
+}
+
+/* each cell wraps a RecommendedCard; useful if you want padding around cards */
+.recommended__cell {
+  display: block;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1100px) {
+  .recommended__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .recommended__grid {
+    grid-template-columns: 1fr; /* collapse into single column on narrow screens */
+  }
+
+  .recommended__controls { margin-top: 8px; }
+}

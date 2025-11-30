@@ -1,0 +1,178 @@
+.bulletin {
+ background: rgba(255,255,255,0.03);
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* header */
+.bulletin__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bulletin__titleWrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.bulletin__icon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.03);
+  font-size: 16px;
+}
+
+.bulletin__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.ThunderIcon {
+  place-items: center;
+  border-radius: 4px;
+  background: #1e1e1eff;
+  padding: 6px;
+  border: 0.5px;
+}
+
+/* simple nav buttons at top-right */
+.bulletin__controls {
+  display: flex;
+  gap: 8px;
+}
+.bulletin__navBtn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.04);
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* grid of two cards */
+.bulletin__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* each course card */
+.bulletCard {
+  display: flex;
+  gap: 16px;
+  background: rgba(0,0,0,0.25); /* darker inner card */
+  border-radius: 10px;
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.02);
+  box-sizing: border-box;
+}
+
+/* left media area */
+.bulletCard__media {
+  width: 160px;
+  min-width: 160px;
+  height: 120px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #222;
+}
+.bulletCard__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* body */
+.bulletCard__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #ddd;
+}
+
+/* kicker */
+.bulletCard__kicker {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+/* title */
+.bulletCard__title {
+  margin: 0;
+  font-size: 15px;
+  color: #fff;
+}
+
+/* desc */
+.bulletCard__desc {
+  margin: 0;
+  color: rgba(255,255,255,0.62);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* meta pills */
+.bulletCard__meta {
+  display: flex;
+  gap: 10px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 20px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.03);
+  color: #ddd;
+  font-size: 13px;
+}
+
+.pill__icon {
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+/* actions */
+.bulletCard__actions {
+  margin-top: auto; /* push actions to bottom */
+  display: flex;
+  gap: 12px;
+}
+
+/* buttons */
+.btn {
+  border-radius: 28px;
+  padding: 10px 18px;
+  font-size: 15px;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.btn--primary {
+  background: linear-gradient(90deg, #7B2CFF, #6a24e6);
+  color: #fff;
+  border: none;
+}
+.btn--ghost {
+  background: transparent;
+  color: #fff;
+}

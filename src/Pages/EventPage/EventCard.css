@@ -1,0 +1,115 @@
+/* EventCard (matching your dark theme) */
+.eventCard {
+  background: rgba(40, 40, 40, 0.29);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform .12s ease, box-shadow .12s ease;
+  cursor: pointer;
+}
+
+.eventCard:focus,
+.eventCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.6);
+  outline: none;
+}
+
+/* top thumbnail / media */
+.eventCard__media {
+  width: 100%;
+  height: 180px;
+  background: #0b0b0b;
+  overflow: hidden;
+  display: block;
+  border-radius: 8px;
+}
+.eventCard__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* content body */
+.eventCard__body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* top row: category at left, small dot at right */
+.eventCard__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.eventCard__category {
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.3px;
+}
+
+/* small circular dot on right as in your design */
+.eventCard__dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.04);
+  display: grid;
+  place-items: center;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+/* title */
+.eventCard__title {
+  margin: 0;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+/* description */
+.eventCard__desc {
+  margin: 0;
+  color: rgba(255,255,255,0.66);
+  font-size: 13px;
+  line-height: 1.5;
+  min-height: 56px; /* keep cards aligned vertically */
+}
+
+/* meta line */
+.eventCard__meta {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+.eventCard__metaItem {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: rgba(255,255,255,0.78);
+  font-size: 13px;
+}
+.eventCard__metaIcon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  display: inline-block;
+  opacity: 0.9;
+}
+
+/* responsive tweaks */
+@media (min-width: 1280px) {
+  .eventCard__media { height: 200px; }
+}
+@media (max-width: 900px) {
+  .eventCard__media { height: 150px; }
+  .eventCard__title { font-size: 15px; }
+}

@@ -1,0 +1,110 @@
+.bulletCard {
+  display: flex;
+  flex-direction: column;
+  background: rgba(40, 40, 40, 0.29);
+  border-radius: 10px;
+  padding: 18px;
+  border: 1px solid rgba(255,255,255,0.02);
+  box-sizing: border-box;
+  color: #ddd;
+  gap: 12px;
+}
+
+/* text container */
+.bulletCard__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* kicker */
+.bulletCard__kicker {
+  font-size: 10px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+/* title */
+.bulletCard__title {
+  margin: 0;
+  font-size: 15px;
+  color: #fff;
+}
+
+/* description */
+.bulletCard__desc {
+  margin: 0;
+  color: rgba(255,255,255,0.62);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* meta pills */
+.bulletCard__meta {
+  display: flex;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.pill {
+  padding: 8px 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: rgb(255 255 255 / 70%);
+    color: rgb(200 200 200);
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform .08s 
+}
+
+/* icon now an <img> so size explicitly controlled */
+.pill__icon {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+/* text inside pill */
+.pill__text {
+  line-height: 1;
+  font-size: 11px;
+}
+
+/* actions */
+.bulletCard__actions {
+  margin-top: auto; /* pushes actions to bottom */
+  display: flex;
+  gap: 12px;
+}
+
+/* buttons */
+.btn {
+  border-radius: 28px;
+  padding: 10px 18px;
+  font-size: 15px;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.btn--primary {
+  background: #4F28CF;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  font-size: 14px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: fit-content;
+}
+.btn--ghost {
+  background: transparent;
+  color: white;
+  border: 1px solid #4f28cfad;
+  padding: 10px 24px;
+  font-size: 14px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: fit-content;
+}

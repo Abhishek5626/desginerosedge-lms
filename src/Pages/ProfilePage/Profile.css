@@ -1,0 +1,156 @@
+/* Page container */
+.profilePage {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Header (title + pills)
+   The .pageArea parent already centers the content, so this stays compact */
+.profilePage__header {
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  gap: 14px;
+  align-items: left;
+  justify-content: space-between;
+}
+
+/* Title + subtitle */
+.profilePage__title {
+  font-size: 20px;
+  margin: 0 0 6px 0;
+}
+.profilePage__subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Pills wrapper spacing */
+.profilePage__pills {
+  margin-top: 4px;
+}
+
+/* Banner card with centered avatar & info */
+.profilePage__banner {
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profileBanner__inner {
+  width: 100%;
+  max-width: var(--center-max);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.profileBanner__avatarWrap {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 12px;
+  display: inline-block;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+}
+.profileBanner__avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.profileBanner__name {
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 4px;
+}
+.profileBanner__email {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 6px;
+}
+.profileBanner__role {
+  font-size: 14px;
+  margin-top: 6px;
+  color: rgba(255,255,255,0.85);
+}
+
+/* Two-column main grid */
+.profilePage__grid {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 20px;
+}
+
+/* Left column (big cards) */
+.profilePage__left { display: flex; flex-direction: column; gap: 18px; }
+
+/* Right column (stacked widgets) */
+.profilePage__right { display: flex; flex-direction: column; gap: 18px; }
+
+/* Stat card base (we reuse .card utility; additional tweaks) */
+.statCard__title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.contentarea {
+    display: flex;
+width: 138px;
+flex-direction: column;
+align-items: flex-start;
+gap: 23px;
+}
+
+.statCard__content p {
+  margin: 0 0 12px 0;
+  display: inline-block;
+  color: rgba(255,255,255,0.78);
+}
+
+/* mini thumbnail inside left card */
+.miniThumb { margin-top: 12px; width: 220px; border-radius: 8px; overflow:hidden; }
+.miniThumb img { width: 100%; height: auto; display:block; }
+
+/* comment badge style inside left card */
+.commentBadge {
+  margin-top: 12px;
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.03);
+  color: #fff;
+}
+
+/* Leader badge */
+.leaderBadge {
+  font-size: 28px;
+  margin-top: 12px;
+  text-align: right;
+}
+
+/* bottom area grid */
+.profilePage__bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* make some cards take full width if needed */
+.statCard.wide { grid-column: 1 / -1; }
+
+
+/* Responsive: stack columns on narrow viewports */
+@media (max-width: 1000px) {
+  .profilePage__grid { grid-template-columns: 1fr; }
+  .profilePage__banner { padding: 20px; }
+  .profileBanner__inner { padding: 8px 0; }
+  .profilePage__bottomGrid { grid-template-columns: 1fr; }
+}

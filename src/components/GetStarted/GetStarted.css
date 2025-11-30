@@ -1,0 +1,132 @@
+/* Tokens (you can move to :root) */
+.gs {
+  background: rgba(255,255,255,0.03);
+  color: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+/* header */
+.gs__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.gs__icon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.03);
+}
+.gs__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* main body */
+.gs__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* heading */
+.gs__heading {
+  margin: 4px 0px 0px 0px ;
+  font-size: 13px;
+  font-weight: 400;
+  color: rgba(183, 181, 181, 1);
+}
+
+/* progress bar */
+.gs__progressBar {
+  width: 100%;
+  height: 10px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.gs__progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #7B2CFF 0%, #6A24E6 100%);
+  border-radius: 12px 0 0 12px;
+  transition: width 260ms ease;
+}
+
+/* meta */
+.gs__meta {
+  font-size: 12px;
+  opacity: 0.85;
+  margin: 2px 0px 0px 0px ; 
+  font-weight: 200;
+}
+
+/* steps list */
+.gs__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+/* individual step */
+.gs__step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  background: rgb(26, 26, 26);
+  border: 1px solid rgba(255,255,255,0.03);
+  cursor: pointer;
+  transition: box-shadow .12s ease, transform .08s ease;
+}
+.gs__step:focus,
+.gs__step:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+  outline: none;
+}
+
+/* index circle */
+.gs__stepIndex {
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  color: #fff;
+  font-weight: 600;
+}
+
+/* label */
+.gs__stepLabel {
+  flex: 1;
+  font-size: 13px;
+}
+
+/* completed state */
+.gs__step.is-completed {
+  background: linear-gradient(90deg, rgba(123,44,255,0.12), rgba(106,36,230,0.08));
+  border: 1px solid rgba(123,44,255,0.12);
+}
+.gs__step.is-completed .gs__stepIndex {
+  background: rgba(0,0,0,0.5);
+  border: 1px solid rgba(123,44,255,0.5);
+}
+
+/* accessibility: make sure buttons are visible on focus */
+.gs__step:focus-visible {
+  outline: 2px solid rgba(123,44,255,0.22);
+  outline-offset: 4px;
+}

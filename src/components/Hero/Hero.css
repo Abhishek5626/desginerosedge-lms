@@ -1,0 +1,78 @@
+/* Hero component tokens */
+:root {
+  --hero-bg: #131313;
+  --hero-radius: 12px;
+  --hero-height: 120px;
+  --hero-padding: 22px;
+  --hero-text: #ffffff;
+  --hero-subtle: rgba(255,255,255,0.6);
+  --border: 1px solid rgba(255,255,255,0.05);
+}
+
+.hero {
+  width: 100%;
+  border: var(--border);
+  border-radius: 12px;
+  background: var(--hero-bg);
+  padding: 18px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Constrain inner area so it doesn't stretch too wide */
+.hero__inner {
+  width: 100%;
+  max-width: 980px;
+  display: table-column ;
+  align-items: center;
+  gap: 18px;
+  padding: 8px 12px;
+}
+
+/* Avatar wrapper (circular) */
+.hero__avatarWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 64px;
+}
+
+/* Avatar image */
+.hero__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.04);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+/* Meta text area (centered) */
+.hero__meta {
+  flex: 1;
+  text-align: center;
+}
+
+/* Date small text */
+.hero__date {
+  color: var(--hero-subtle);
+  font-size: 14px;
+  margin-bottom: 6px;
+  padding-top: 4px;
+}
+
+/* Title big text */
+.hero__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--hero-text);
+  letter-spacing: 0.2px;
+}
+
+/* Name can be styled heavier if desired */
+.hero__name {
+  font-weight: 600;
+}

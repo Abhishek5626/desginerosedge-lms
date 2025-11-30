@@ -1,0 +1,187 @@
+:root {
+  --bg: #131313;
+  --panel: #121212;
+  --muted: #6b6b6b;
+  --text: #ffffff;
+  --pill: #292929;
+  --accent: #7b2cff;
+  --radius-lg: 16px;
+  --radius-md: 10px;
+  --space: 20px;
+  --font-heading: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+.sidenav {
+  width: 320px;
+  min-height: 100vh;
+  background: #161616;
+  color: var(--text);
+  padding: 28px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-family: var(--font-heading);
+}
+
+.sidenav__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.sidenav__logoStar {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--accent), #4a0bd1);
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.sidenav__brandText {
+  font-weight: 600;
+  font-size: 22px;
+  letter-spacing: 0.2px;
+}
+
+.sidenav__nav {
+  flex: 1 1 auto;
+  overflow: auto;
+}
+
+.sidenav__section {
+  margin-top: 10px;
+  margin-bottom: 6px;
+}
+
+.sidenav__sectionTitle {
+  font-weight: 500;
+  letter-spacing: 0.2px; 
+  font-size: 13px;
+  opacity: 0.6;
+  margin: 24px 0 8px;
+}
+
+.sidenav__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.sidenav__item {
+  margin: 10px 0;
+}
+
+
+.sidenav__link:focus {
+  outline: 2px solid rgba(123,44,255,0.22);
+  outline-offset: 2px;
+}
+
+.sidenav__label {
+  font-size: 15px;
+  opacity: 85%;              /* reduce the main item font size */
+  letter-spacing: 0.1px; 
+  display: inline-block;
+}
+
+.sidenav__icon {
+  opacity: 0.65;
+  font-size: 20px;
+}
+
+.sidenav__item.is-active .sidenav__link {
+  background: var(--pill);
+  box-shadow: none;
+}
+
+.sidenav__card {
+  margin-top: 20px;
+  background: transparent;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.sidenav__cardMedia {
+  height: 120px;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.35);
+}
+
+.sidenav__cardBody {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: rgba(255,255,255,0.04);
+}
+
+.sidenav__cardText {
+  font-size: 18px;
+  max-width: 70%;
+}
+
+.sidenav__cardBtn {
+  background: rgba(255,255,255,0.06);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.sidenav__footer {
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.02);
+}
+
+/* make active link visually obvious */
+.sidenav__link.is-active {
+  background: var(--pill, #292929);
+  color: white;
+}
+
+/* ensure NavLink uses full-width pill look */
+.sidenav__link {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 28px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidenav__link.is-active {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.sidenav__logoImg {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Disabled menu items */
+.sidenav__link.is-disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: none;      /* prevent clicking */
+}
+
+/* Optional: slight hover visual without enabling click */
+.sidenav__item:hover .sidenav__link.is-disabled {
+  background: transparent;  /* no hover pill */
+  opacity: 0.4;
+}

@@ -1,0 +1,36 @@
+.eventPage {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* header row */
+.eventPage__header {
+  flex-direction: column;
+  align-items: flex-start;
+  display: flex;
+  gap: 14px;
+  align-items: left;
+  justify-content: space-between;
+}
+.eventPage__title { font-size: 20px; margin: 0 0 8px 0; }
+.eventPage__desc { margin: 0; color: var(--muted); font-size: 14px; }
+
+/* grid: 3 columns on desktop like your screenshot */
+.eventPage__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 6px;
+}
+
+/* reduce to 2 columns on medium screens */
+@media (max-width: 1200px) {
+  .eventPage__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* single column on mobile */
+@media (max-width: 700px) {
+  .eventPage__grid { grid-template-columns: 1fr; }
+  .eventPage__header { align-items: flex-start; }
+}
