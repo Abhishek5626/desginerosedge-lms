@@ -2,7 +2,7 @@ import React from 'react'
 import './EventCard.css'
 
 // icons (update paths to your actual svg files)
-import TimeIcon from '../../assets/icons/TimeIcon.svg'
+import Timeicon from '../../assets/icons/Timeicon.svg'
 import CalendarIcon from '../../assets/icons/CalendarIcon.svg'
 import PeopleIcon from '../../assets/icons/PeopleIcon.svg'
 import avatarImg from '../../assets/avatarImg.jpg'
@@ -52,7 +52,7 @@ export default function EventCard({
           </div>
 
           <div className="eventCard__metaItem">
-            <img src={TimeIcon} alt="" aria-hidden="true" className="eventCard__metaIcon" />
+            <img src={Timeicon} alt="" aria-hidden="true" className="eventCard__metaIcon" />
             <span>{time}</span>
           </div>
 
