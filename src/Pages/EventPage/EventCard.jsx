@@ -5,9 +5,9 @@ import './EventCard.css'
 import TimeIcon from '../../assets/icons/TimeIcon.svg'
 import CalendarIcon from '../../assets/icons/CalendarIcon.svg'
 import PeopleIcon from '../../assets/icons/PeopleIcon.svg'
-
+import avatarImg from '../../assets/avatarImg.jpg'
 // default thumbnail (replace with your asset path if needed)
-const defaultThumb = '/mnt/data/e58c542d-81f0-4dba-8241-a3af5f676565.png'
+
 
 /**
  * Props:
@@ -20,7 +20,7 @@ const defaultThumb = '/mnt/data/e58c542d-81f0-4dba-8241-a3af5f676565.png'
  *  - going (string|number)
  */
 export default function EventCard({
-  thumbnail = defaultThumb,
+  thumbnail = avatarImg,
   category = 'EVENT',
   title = 'Workshop | Designing Human-Centered AI Outputs',
   description = 'Exercise where you learn about the fundamental principles of designs by replicating the design as it is.',
