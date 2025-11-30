@@ -21,9 +21,9 @@ export default function App() {
         <main className="pageArea" role="main">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/courses" element={<CoursesPage />} />
+            <Route path="/coursespage" element={<CoursesPage />} />
             <Route path="/profile" element={<Profile />} />
-            <Route path="/showcase" element={<ShowcasePage />} />
+            <Route path="/showcasepage" element={<ShowcasePage />} />
             <Route path="/eventpage" element={<EventPage />} />
 
             {/* other routes */}

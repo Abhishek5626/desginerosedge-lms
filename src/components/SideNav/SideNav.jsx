@@ -23,7 +23,7 @@ export default function SideNav() {
       title: '',
       items: [
         { id: 'Home', label: 'Home', icon: Home, to: '/' },
-        { id: 'bookmarks', label: 'Bookmarks', icon: Bookmark, to: '/bookmarks' }
+        { id: 'bookmarks', label: 'Bookmarks', icon: Bookmark, disabled: true }
       ]
     },
     {
