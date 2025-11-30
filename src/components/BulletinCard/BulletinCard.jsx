@@ -3,7 +3,7 @@ import React from 'react'
 import './BulletinCard.css'
 
 // import SVGs (bundler will give a URL)
-import TimeIcon from '../../assets/icons/TimeIcon.svg'
+import Timeicon from '../../assets/icons/Timeicon.svg'
 import StarIcon from '../../assets/icons/StarIcon.svg'
 
 export default function BulletinCard({
@@ -23,7 +23,7 @@ export default function BulletinCard({
 
         <div className="bulletCard__meta" aria-hidden="false">
           <span className="pill" title={`${time} duration`}>
-            <img src={TimeIcon} alt="" aria-hidden="true" className="pill__icon" />
+            <img src={Timeicon} alt="" aria-hidden="true" className="pill__icon" />
             <span className="pill__text">{time}</span>
           </span>
 
