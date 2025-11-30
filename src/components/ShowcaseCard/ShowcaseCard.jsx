@@ -1,5 +1,6 @@
 import React from 'react'
 import './ShowcaseCard.css'
+import avatarImg from '../../assets/avatarImg.jpg'
 
 /**
  * ShowcaseCard props:
@@ -11,7 +12,7 @@ import './ShowcaseCard.css'
  *  - onClick: function (optional)
  */
 export default function ShowcaseCard({
-  thumbnail = '/mnt/data/82c65e3e-7d3b-4509-8ace-9b5ba3f34441.png',
+  thumbnail = avatarImg,
   category = 'Assessment',
   title = 'Space Technology Website',
   description = 'Exercise where you learn about the fundamental principles of designs by replicating the design as it is.',
