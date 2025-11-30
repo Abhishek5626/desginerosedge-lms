@@ -2,7 +2,7 @@ import React from 'react'
 import './EventPage.css'
 import Pills from '../../components/Pills/Pills' // your pills component
 import EventCard from './EventCard' // local card
-import avatarImg from '../../assets/avatarIMG.jpg' // replace with actual path
+import avatarImg from '../../assets/avatarImg.jpg' // replace with actual path
 
 export default function EventPage() {
   const pills = [
