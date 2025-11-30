@@ -1,7 +1,7 @@
 // src/components/Recommended/RecommendedList.jsx
 import React from 'react'
 import UpcomingCard from './UpcomingCard'
-import TimeIcon from '../../assets/icons/TimeIcon.svg'
+import Timeicon from '../../assets/icons/Timeicon.svg'
 import StarIcon from '../../assets/icons/StarIcon.svg'
 import ModulesIcon from '../../assets/icons/ModulesIcon.svg'
 import TagIcon from '../../assets/icons/TagIcon.svg'
@@ -21,7 +21,7 @@ export default function UpcomingEvents({ title = 'Upcoming Events' }) {
         'Explore AI concepts, principles and practices essential for creating human-centered experiences.',
       tags: [
         { label: 'UX', icon: TagIcon },
-        { label: '3h', icon: TimeIcon },
+        { label: '3h', icon: Timeicon },
         { label: '224 Going', icon: ModulesIcon }
       ]
     },
@@ -32,7 +32,7 @@ export default function UpcomingEvents({ title = 'Upcoming Events' }) {
       desc: 'Short course on guerrilla research and rapid testing.',
       tags: [
         { label: 'AI', icon: TagIcon },
-        { label: '3h', icon: TimeIcon },
+        { label: '3h', icon: Timeicon },
         { label: '12 Going', icon: StarIcon }
       ]
     }
