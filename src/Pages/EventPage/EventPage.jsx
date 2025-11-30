@@ -2,7 +2,7 @@ import React from 'react'
 import './EventPage.css'
 import Pills from '../../components/Pills/Pills' // your pills component
 import EventCard from './EventCard' // local card
-import sampleThumb from '../../assets/avatarIMG.jpg' // replace with actual path
+import avatarImg from '../../assets/avatarIMG.jpg' // replace with actual path
 
 export default function EventPage() {
   const pills = [
@@ -17,7 +17,7 @@ export default function EventPage() {
   // Example data - replace with API data later
   const events = new Array(9).fill(0).map((_, i) => ({
     id: i,
-    thumbnail: sampleThumb,
+    thumbnail: avatarImg,
     category: 'EVENT',
     title: `Workshop | Designing Human-Centered AI Outputs`,
     description:
