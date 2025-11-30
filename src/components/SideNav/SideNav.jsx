@@ -10,7 +10,7 @@ import Leaderboard from "../../assets/icons/Leaderboard.svg";
 import MasterClass from "../../assets/icons/MasterClass.svg";
 import Mentor from "../../assets/icons/Mentor.svg";
 import Logo from "../../assets/icons/Logo.svg"; 
-import Showcase from "../../assets/icons/showcase.svg"; 
+import Showcase from "../../assets/icons/Showcase.svg"; 
 import JobBoard from "../../assets/icons/JobBoard.svg"; 
 import Events from "../../assets/icons/Events.svg";
 import Profile from "../../assets/icons/Profile.svg";
