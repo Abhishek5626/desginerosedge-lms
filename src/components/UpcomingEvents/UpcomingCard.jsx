@@ -4,7 +4,7 @@ import './UpcomingCard.css'
 
 // common icons (bundler will give a URL)
 import TagIcon from '../../assets/icons/TagIcon.svg'
-import TimeIcon from '../../assets/icons/TimeIcon.svg'
+import Timeicon from '../../assets/icons/Timeicon.svg'
 import StarIcon from '../../assets/icons/StarIcon.svg'
 import ModulesIcon from '../../assets/icons/ModulesIcon.svg'
 
