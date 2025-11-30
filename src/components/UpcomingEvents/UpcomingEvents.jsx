@@ -5,7 +5,7 @@ import Timeicon from '../../assets/icons/Timeicon.svg'
 import StarIcon from '../../assets/icons/StarIcon.svg'
 import ModulesIcon from '../../assets/icons/ModulesIcon.svg'
 import TagIcon from '../../assets/icons/TagIcon.svg'
-import avatarIMG from '../../assets/avatarIMG.jpg' // replace with your thumbnail path
+import avatarImg from '../../assets/avatarImg.jpg' // replace with your thumbnail path
 import './UpcomingEvents.css'
 import ThunderIcon from "../../assets/icons/ThunderIcon.svg";
 
@@ -15,7 +15,7 @@ export default function UpcomingEvents({ title = 'Upcoming Events' }) {
   const cards = [
     {
       id: 1,
-      thumbnail: avatarIMG,
+      thumbnail: avatarImg,
       title: 'Designing Dashboard from scratch start to finish.   ',
       desc:
         'Explore AI concepts, principles and practices essential for creating human-centered experiences.',
@@ -27,7 +27,7 @@ export default function UpcomingEvents({ title = 'Upcoming Events' }) {
     },
     {
       id: 2,
-      thumbnail: avatarIMG,
+      thumbnail: avatarImg,
       title: 'UX Research Sprint',
       desc: 'Short course on guerrilla research and rapid testing.',
       tags: [
