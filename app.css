@@ -1,0 +1,122 @@
+:root {
+  --bg: #0B0F12;
+  --content-bg: #0b0b0b;
+  --muted: #8b8b8b;
+  --text: #ffffff;
+  --gap: 24px;
+
+  /* page tokens */
+  --center-max: 1100px;
+  --sidebar-width: 320px;
+  --gutter: 28px;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* App shell: left nav + content area */
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.banner {
+  display: flex;
+  min-height: 100vh;
+}
+/* Content column that holds TopBar, pageArea (Hero + grid) */
+.app__content {
+  flex: 1;
+  background: var(--content-bg);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* TopBar note: TopBar component's CSS has sticky position.
+   If you want TopBar to always stay visible at top of content,
+   ensure .topbar { position: sticky; top: 0; z-index: 50; } exists in TopBar.css.
+*/
+
+/* Container for the page body (centers content) */
+.pageArea {
+  width: 100%;
+  max-width: calc(var(--center-max) + var(--sidebar-width) + var(--gutter));
+  margin: 16px auto;      /* centers the page area horizontally */
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Small spacer to ensure Hero sits visually below the TopBar
+   (TopBar is already the first child of .app__content; this small margin
+   prevents the hero from visually touching the topbar on very small screens) */
+.pageArea > .hero {
+  margin-top: 0;
+}
+
+/* Grid with main column and right sidebar */
+.pageArea__grid {
+  display: grid;
+  grid-template-columns: 1fr 320px; /* left main column and fixed sidebar */
+  gap: 20px;
+  margin-top: 10px;
+}
+
+/* Main column (stack of cards & sections) */
+.pageArea__main {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Right aside (widgets) */
+.pageArea__aside {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: stretch;
+}
+
+/* Basic card style used across dashboard */
+.card {
+  background: rgba(255,255,255,0.02);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.02) inset;
+  border: 1px solid rgba(255,255,255,0.02);
+  color: #e8e8e8;
+}
+
+/* Hero component spacing (the hero component styles are in Hero.css;
+   this rule ensures full-width hero inside .pageArea, centered by .pageArea constraints) */
+.hero {
+  width: 100%;
+}
+
+/* Responsive fallback: collapse to single column under 1000px */
+@media (max-width: 1000px) {
+  .pageArea__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* reduce margins/paddings on smaller screens */
+  .pageArea {
+    padding: 0 12px;
+    margin: 12px auto;
+  }
+}
