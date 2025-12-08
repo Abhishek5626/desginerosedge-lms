@@ -32,6 +32,11 @@ body {
   min-height: 100vh;
 }
 
+.banner {
+  display: flex;
+  flex-direction: column;
+  min-height: 20vh;
+}
 /* Content column that holds TopBar, pageArea (Hero + grid) */
 .app__content {
   flex: 1;

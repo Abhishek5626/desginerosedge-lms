@@ -8,13 +8,18 @@ import CoursesPage from './Pages/CoursesPage/CoursesPage' // other pages
 import Profile from './Pages/ProfilePage/Profile'
 import ShowcasePage from './Pages/ShowcasePage/ShowcasePage'
 import EventPage from './Pages/EventPage/EventPage'
+import WIPBanner from './components/WIPBanner/WIPBanner' // Work In Progress Banner
 
 
 export default function App() {
   return (
+<div className='banner'>
+  <WIPBanner />
+
+
     <div className="app">
       <SideNav />
-
+     
       <div className="app__content">
         <TopBar />
 
@@ -30,6 +35,7 @@ export default function App() {
           </Routes>
         </main>
       </div>
+    </div>
     </div>
   )
 }
